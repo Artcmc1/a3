@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package Network;
+package Service;
 
+import Model.Aluno;
 import Model.Horario;
 import java.time.LocalDateTime;
-import java.util.List;
 
 /**
  *
@@ -14,7 +14,5 @@ import java.util.List;
  */
 public interface ConsultaMarcacaoService {
 
-    List<Horario> consultarHorarios();
-
-    void marcarHorario(String alunoId, LocalDateTime dataHora);
+   public Horario marcarHorario(Aluno aluno, LocalDateTime data);
 }

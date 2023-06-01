@@ -2,12 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Network;
+package Service;
 
 import Model.Aluno;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 
 /**
  *
@@ -15,17 +12,10 @@ import java.util.UUID;
  */
 public class CadastroServiceImpl implements CadastroService {
 
-    private Map<String, Aluno> alunos = new HashMap<>();
-
-    @Override
+     @Override
     public Aluno cadastrarAluno(String nome, int idade) {
-        String id = UUID.randomUUID().toString();
-        Aluno aluno = new Aluno(id, nome, idade);
-        alunos.put(id, aluno);
+        Aluno aluno = new Aluno(nome, idade);
+        // Aqui você deve adicionar o aluno ao banco de dados ou a um repositório de dados
         return aluno;
-    }
-
-    public Aluno buscarAluno(String id) {
-        return alunos.get(id);
     }
 }

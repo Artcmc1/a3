@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package Network;
+package Service;
 
 import Model.Aluno;
 
@@ -11,8 +11,6 @@ import Model.Aluno;
  * @author artcm
  */
 public interface CadastroService {
-     Aluno cadastrarAluno(String nome, int idade);
-    Aluno buscarAluno(String id);
+    public Aluno cadastrarAluno(String nome, int idade);
 }
-
 

@@ -11,13 +11,30 @@ import java.time.LocalDateTime;
  * @author artcm
  */
 public class Horario {
-     LocalDateTime dataHora;
-    public Aluno aluno;
+      private Aluno aluno;
+    private LocalDateTime data;
 
-    public Horario(LocalDateTime dataHora) {
-        this.dataHora = dataHora;
+    // constructor
+    public Horario(Aluno aluno, LocalDateTime data) {
+        this.aluno = aluno;
+        this.data = data;
     }
 
-    // getters and setters
-}
+    // getters
+    public Aluno getAluno() {
+        return this.aluno;
+    }
 
+    public LocalDateTime getData() {
+        return this.data;
+    }
+
+    // setters
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
+
+    public void setData(LocalDateTime data) {
+        this.data = data;
+    }
+}
